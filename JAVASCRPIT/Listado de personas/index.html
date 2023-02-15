@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado Personas</title>
+    <link href="/CSS/estilos.css" rel="stylesheet"/>
+</head>
+<body onload="mostrarPersonas()">
+    <div class="contenedor" id="cabecero">
+        <h1>Listado de personas</h1>
+    </div>
+    <div class="contenedor">
+    <div class="elemento">
+        <ul id="personas">
+    <!--<li>Juani Guzman</li>-->
+        </ul>
+    </div>
+    </div>
+    <div class="contenedor">
+        <div style='text-align: center;'>
+        <button style="cursor: pointer;" onclick="agregarPersona()">
+            <ion-icon name="checkmark-outline"></ion-icon>
+        </button>
+    </div>
+    <form id="forma">
+        <input type="text" id="nombre" placeholder="Nombre"/>
+        <input type="text" id="apellido" placeholder="Apellido"/>
+    </form>
+    </div>
+    <script src='js/persona.js'></script>
+    <script src='js/app.js'></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+html{
+background-color: #2196f3;
+min-height: 1000px;
+font-family: "helvetica neue";
+background: url(fondo3.png), #2196f3;
+background: url(fondo3.png), -webkit-gradient(linear, right top, left top, from(#2196f3), to (#009688));
+background: url(fondo3.png), linear-gradient(to left, #2196f3, #009688);
+}
+
+
+h1{
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contenedor{
+    max-width: 400px;
+    margin: 35px auto;
+    background: #009688;
+    border-radius: 6px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.9);
+    padding: 7px;
+    
+}
+
+#cabecero{
+
+    background-color: #3f51b5;
+    text-align: center;
+  
+}
+
+.elemento{
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.elemento:last-child{
+   border-bottom: 0;
+}
+
+input[type="checkbox"]{
+    margin: 20px;
+    padding: 1px;
+}
+
+p{
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+form{
+    text-align: center;
+    margin-left: 20px;
+}
+button{
+    min-height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #3f51b5;
+    color: #fff;
+    font-size: 20px;
+    padding-bottom: 1px;
+    border-width: 0;
+}
+
+input[type="text"]{
+    text-align: center;
+    height: 50px;
+    top: 10px;
+    border-radius: 5%;
+    border-width: 0.5vh;
+    border-color: #00204a;
+}
