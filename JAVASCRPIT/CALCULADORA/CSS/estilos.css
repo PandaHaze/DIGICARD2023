@@ -1,0 +1,15 @@
+
+h1{
+text-align: center;
+font-size: 7vh;
+border-radius: 5px;
+border: #C19A6B 3px solid;
+background-color: #C19A6B;
+font-family: 'Courier New', Courier, monospace;
+}
+
+label{
+ color:#C3B091;
+ font-family: 'Times New Roman', Times, serif;
+}
+
