@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex@3.0.1/dist/vuex.js"></script>
+</head>
+<body>
+    
+<div id="app"> 
+
+    <titulo></titulo>
+
+<script>
+
+        Vue.component('titulo',{
+
+     template: //html
+     `
+         <div>
+         <h1>numero {{numero}}</h1>
+         <hijo></hijo>
+         </div>
+     `,
+       computed:{
+        ...Vuex.mapState(['numero'])
+       },
+     methods:{
+        ...Vuex.mapMutations(['aumentar'])
+     }
+        });
+
+        Vue.component('hijo',{
+            template: //html
+           ` <div>
+         <button @click="aumentar">+</button>
+         <button @click="restar(2)">-</button>
+         <button @click="recuperarCursos">Recuperar Cursos</button>
+         <h1>numero {{numero}}</h1>
+         <ul v-for="item of cursos">
+            <li>{{item.nombre}}</li>
+            </ul>
+         </div>`,
+       computed:{
+        ...Vuex.mapState(['numero','cursos'])
+       },
+     methods:{
+        ...Vuex.mapMutations(['aumentar','restar']),
+        ...Vuex.mapActions(['recuperarCursos'])
+     }
+     
+        });
+         
+        const store = new Vuex.Store({
+            state: {
+              numero: 10,
+              cursos:[]
+            },
+            mutations: {
+                aumentar(state){
+                state.numero ++
+                },
+             restar(state,n){
+                state.numero -=  n 
+             },
+             llenarCursos(state,cursosAccion){
+                state.cursos = cursosAccion 
+             }
+            },
+            actions: {
+                recuperarCursos: async function({commit}){
+                    const data = await fetch('cursos.json');
+                    const cursos = await data.json();
+                    commit('llenarCursos',cursos)
+                }
+            }
+        });
+
+
+ new Vue({
+    el: '#app',
+    store: store
+
+ })       
+    </script>
+</div>
+
+</body>
+</html>

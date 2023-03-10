@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+
+<div id="app" class="container mt-5">
+
+<div :class="['p-3','text white', fondo]">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempore temporibus 
+accusantium, officiis architecto qui iste illo voluptates cum ex delectus numquam aliquid 
+sunt ea porro ut, minus aspernatur dolorum.
+</p>
+</div>
+<input type="text" class="form-control my-3" v-model="fondo">
+<div class="text-white p-3" :class="{'bg-info': color, 'bg-success': !color}">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cum voluptates possimus 
+autem quod incidunt soluta reiciendis, modi aliquid iure eveniet pariatur fuga non facilis 
+molestiae illum distinctio placeat repudiandae.
+</p>
+</div>
+<button class="btn btn-primary" @click="color= !color">Cambiar</button>
+</div>
+ 
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="01.js"></script>
+</body>
+</html>
